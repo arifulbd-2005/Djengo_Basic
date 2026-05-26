@@ -3,10 +3,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def machine_learning(request):
-    return render(request, 'machine_learning.html')
+    return render(request, 'machine_learning/machine_learning.html')
 def rendom_forest(request):
-    return render(request, 'rendom_forest.html')
+    return render(request, 'machine_learning/rendom_forest.html')
 def k_nearest(request):
-    return render(request, 'knn.html')
+    return render(request, 'machine_learning/knn.html')
 def dtree(request):
-    return render(request, 'DT.html')
+    return render(request, 'machine_learning/DT.html')

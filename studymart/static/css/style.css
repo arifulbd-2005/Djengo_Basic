@@ -1,0 +1,12 @@
+body{
+    background-color: aqua;
+}
+h1{
+    color: azure;
+    font-size: 20px;
+    font-weight: 900;
+}
+img{
+    height: 400px;
+    width: 500px;
+}
