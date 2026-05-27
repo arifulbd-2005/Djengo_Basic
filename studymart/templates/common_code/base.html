@@ -4,45 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep_Learning</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/deep_learning.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>{% block title %} {% endblock title %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary" "navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">About</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand" href="{% url "about" %}">About</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Blogs</a>
+          <a class="nav-link active" aria-current="page" href="{% url "blog1" %}">Blogs</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Data_Analysis</a>
+          <a class="nav-link" href="{% url "data" %}">Data_Analysis</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Deep_Learning</a>
-        </li>
+          <a class="nav-link" href="deep">Deep_Learning</a>
+        </li><li class="nav-item">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown link
+            Machine_Learning
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Ml</a></li>
-            <li><a class="dropdown-item" href="#">DL</a></li>
-            <li><a class="dropdown-item" href="#">DJ</a></li>
+            <li><a class="dropdown-item" href="/machine/dt/">DT</a></li>
+            <li><a class="dropdown-item" href="/machine/knn/">Knn</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/machine/rn">Random_Forest</a></li>
+            <li><a class="dropdown-item" href="/macine/ml/">ML</a></li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
       </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
     </div>
   </div>
 </nav>
 
 <!-- slide bar -->
- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{% static "image/im1.png" %}" class="d-block w-100" alt="no item">
