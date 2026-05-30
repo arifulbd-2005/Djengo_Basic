@@ -7,10 +7,12 @@
     <title>Forms</title>
 </head>
 <body>
-    <form action="">
-        <table>
-            {{form}}
-        </table>
+    <form action="" method="POST"> {% csrf_token %}
+    <!--{% for field in form %}
+        {{field.label_tag}} <br>
+        {% endfor %}-->
+    
+        {{form.as_p}}
         <input type="submit" value="Submit">
     </form>
 </body>
