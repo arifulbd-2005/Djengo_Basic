@@ -1,0 +1,18 @@
+body{
+    background-color: yellow;
+}
+form{
+border: 5px solid blue;
+}
+label{
+    font-size: 25px;
+    color: brown;
+}
+input{
+    height: 20px;
+    width: 400px;
+    background-color: violet;
+}
+#id_textarea{
+    background-color: skyblue;
+}
